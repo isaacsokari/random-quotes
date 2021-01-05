@@ -16,6 +16,7 @@ const App = () => {
   
   return (
     <>
+      <h1>Random Quote Generator</h1>
       <div id="quote-box">
         <i className="fa fa-quote-left fa-2x"></i>
         <p id="text">{quote}</p>
