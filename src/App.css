@@ -1,38 +1,78 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: #f5f7fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (prefers-dark-theme) {
+  body {
+    background-color: rgba(0,0,0,0.3);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#quote-box {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 2rem;
+  border-radius: 10px;
+  background: #3d6cb9;
   color: white;
+  margin: 1rem;
 }
-
-.App-link {
-  color: #61dafb;
+#quote-box .fa-quote-left {
+  align-self: flex-start;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#quote-box .fa-quote-right {
+  align-self: flex-end;
+  margin-bottom: 1rem;
+}
+#quote-box #text {
+  margin: 2rem;
+  max-width: 30rem;
+  text-align: center;
+  font-weight: 400;
+}
+#quote-box #author {
+  align-self: flex-end;
+  font-weight: 300;
+  font-size: 14px;
+}
+#quote-box .bottom {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin: 1rem 0 0;
+}
+#quote-box .bottom .share-links {
+  align-self: flex-start;
+}
+#quote-box .bottom .share-links a {
+  color: currentColor;
+  padding: 0.5rem;
+  background: #22b2da;
+  border-radius: 5px;
+  display: flex;
+  text-decoration: none;
+}
+#quote-box .bottom #new-quote {
+  align-self: flex-end;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  border: none;
+  background: #00d1ff;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
 }
